@@ -26,6 +26,7 @@ function mc { mkdir -p "$1" && cd "$1"; }
 function g  { gvim "$1" & }
 
 # Mac stuff
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
 # Crazy aliases to switch between Java versions
@@ -43,6 +44,10 @@ set -o vi
 
 # git completion
 source ~/bin/git-completion.bash
+
+# Setup Scala
+export SCALA_HOME=~/scala
+export PATH=$PATH:$SCALA_HOME/bin
 
 # Path addition for gradle
 export PATH=$PATH:~/tools/gradle/gradle/bin

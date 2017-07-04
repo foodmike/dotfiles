@@ -1,6 +1,6 @@
 [user]
 	name = Mike Mahoney
-	email = mike.mahoney@fluxdata.com
+	email = foodmike@gmail.com
 [core]
 	editor = vim
 	autocrlf = input
@@ -18,8 +18,11 @@
 	br = branch --list
   st = status
   co = checkout
+  type = cat-file -t
+  dump = cat-file -p
   dev = checkout devel
   tags = tag -l
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   gr = log --graph --decorate --oneline
   wipe = clean -fdx -e *.user -e *.suo -e config*json -e config*lua -e *.pem
   wipen = clean -fdxn -e *.user -e *.suo -e config*json -e config*lua -e *.pem
