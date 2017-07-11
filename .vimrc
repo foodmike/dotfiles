@@ -14,7 +14,6 @@ set number
 set belloff=all
 
 set lines=50
-set columns=100
 
 " set guifont=ProggyCleanTT:h12
 set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI:qDRAFT

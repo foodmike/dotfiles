@@ -49,4 +49,4 @@ export PATH=$PATH:~/tools/gradle/gradle/bin
 
 # Config alias for dotfile management via git.
 # See https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfile='/mingw64/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

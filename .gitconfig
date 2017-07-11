@@ -9,9 +9,12 @@
 	autosetuprebase = always
 [push]
 	default = simple
+	recurseSubmodules = check
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[diff]
+	submodule = log
 [alias]
 	last = log -l HEAD
 	branches = branch --list
@@ -25,6 +28,7 @@
   wipen = clean -fdxn -e *.user -e *.suo -e config*json -e config*lua -e *.pem
   last = log --name-status -1 HEAD
   info = remote show origin
+  sm = submodule
 
   # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
   lg = !"git lg1"
