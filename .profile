@@ -20,8 +20,6 @@ alias h='history'
 alias hi='history | grep'
 alias zip='zip -x "*.DS_Store" -x "*.svn"'
 
-alias dotfile='~/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 function mc { mkdir -p "$1" && cd "$1"; }
 function g  { gvim "$1" & }
 
