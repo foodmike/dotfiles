@@ -27,6 +27,7 @@ function g  { gvim "$1" & }
 
 # Mac stuff
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias py3='python3'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
 # Crazy aliases to switch between Java versions
