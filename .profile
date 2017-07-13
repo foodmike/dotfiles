@@ -11,7 +11,7 @@ PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
 
 # User specific aliases and functions
 
-alias ls='ls -G --color'
+alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -la'
 alias grep='grep -n'
