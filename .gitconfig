@@ -23,7 +23,6 @@
   co = checkout
   dev = checkout devel
   tags = tag -l
-  gr = log --graph --decorate --oneline
   wipe = clean -fdx -e *.user -e *.suo -e config*json -e config*lua -e *.pem
   wipen = clean -fdxn -e *.user -e *.suo -e config*json -e config*lua -e *.pem
   last = log --name-status -1 HEAD
@@ -31,6 +30,9 @@
   sm = submodule
 
   # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
+  
+  gr = log --graph --decorate --all --date=short --format=format:'%C(bold magenta)%h%C(reset)%C(auto)%d%C(reset): %C(white)%s%C(reset) %C(green)- %an%C(reset)%C(dim green), %cd%C(reset)'
+
   lg = !"git lg1"
   lg1 = !"git lg1-specific --all"
   lg2 = !"git lg2-specific --all"
