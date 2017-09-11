@@ -5,6 +5,7 @@
 	editor = vim
 	autocrlf = input
 	excludesfile = /c/Users/mike.mahoney/.gitignore_global
+	hooksPath = C:/Users/mike.mahoney/.cmake/git/hooks
 [branch]
 	autosetuprebase = always
 [push]
@@ -18,7 +19,7 @@
 [alias]
 	last = log -l HEAD
 	branches = branch --list
-	br = branch --list
+	br = branch 
   st = status
   co = checkout
   dev = checkout devel
@@ -27,6 +28,7 @@
   wipen = clean -fdxn -e *.user -e *.suo -e config*json -e config*lua -e *.pem
   last = log --name-status -1 HEAD
   info = remote show origin
+  head = rev-parse --abbrev-ref HEAD
   sm = submodule
 
   # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298

@@ -16,8 +16,14 @@ set belloff=all
 " set guifont=ProggyCleanTT:h12
 set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI:qDRAFT
 
+" show matching [{()}]
+set showmatch
+
 " highlight search results
-set hls 
+set incsearch
+set hlsearch
+" turn off search highlight with spacebar
+nnoremap <leader><space> :nohlsearch<CR>
 
 " Use UTF-8
 set enc=utf-8

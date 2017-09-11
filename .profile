@@ -5,9 +5,15 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+~/.git-prompt.sh
+
 export PS_INSTANCE_NAME=`hostname`
 
-PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
+#PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
+PS1="\n[\d, \t] \u \[\033[33m\]$(__git_ps1 "(%s)")\[\033[00m\]\n\[\033[1;32m\]\w# \[\033[0m\]"
+#PS1="\n[\d, \t] \u \[\033[33m\]$(__git_ps1 "(%s)")\[\033[00m\]\n"
+#PS1='[\u@\h $(__git_ps1 " (%s)")]\$ '
+
 
 # User specific aliases and functions
 
