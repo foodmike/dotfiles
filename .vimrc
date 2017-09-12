@@ -1,5 +1,4 @@
 
-colors koehler
 syntax on
 
 set backspace=indent,eol,start
@@ -13,7 +12,7 @@ set ruler
 set number
 set belloff=all
 
-set lines=50
+" set lines=50
 set columns=100
 
 " set guifont=ProggyCleanTT:h12

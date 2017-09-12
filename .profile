@@ -23,10 +23,9 @@ alias zip='zip -x "*.DS_Store" -x "*.svn"'
 alias dotfile='~/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 function mc { mkdir -p "$1" && cd "$1"; }
-function g  { gvim "$1" & }
 
 # Mac stuff
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias py3='python3'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
@@ -56,3 +55,8 @@ export PATH=$PATH:~/tools/gradle/gradle/bin
 # Config alias for dotfile management via git.
 # See https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Macport stuff
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+
