@@ -26,6 +26,7 @@ function mc { mkdir -p "$1" && cd "$1"; }
 
 # Mac stuff
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias g='mvim'
 alias py3='python3'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'

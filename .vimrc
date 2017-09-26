@@ -12,9 +12,6 @@ set ruler
 set number
 set belloff=all
 
-" set lines=50
-set columns=100
-
 " set guifont=ProggyCleanTT:h12
 set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI:qDRAFT
 set guifontwide=STKaiti
@@ -35,18 +32,8 @@ autocmd BufRead *.java set ts=4 sw=4
 autocmd BufRead *.py set ts=4 sw=4
 autocmd BufRead *.lua set ts=2 sw=2
 
-" Indent after typing <colon>, <cr>
-autocmd BufRead *.py im :<CR> :<CR><TAB>
-
-" Turn on code completion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType make set omnifunc=ccomplete#Complete sw=4 ts=4
+autocmd BufRead *.js set expandtab ts=2 sw=2 softtabstop=4
+autocmd BufRead *.json set expandtab ts=2 sw=2 softtabstop=4
 
 filetype plugin indent on
 
