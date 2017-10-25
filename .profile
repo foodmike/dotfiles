@@ -8,6 +8,7 @@ fi
 export PS_INSTANCE_NAME=`hostname`
 
 PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
+#PS1='\n[\d, \t] \[\033[1;32m\]\w\[\033[0m\]\n\u\[\033[33m\]$(__git_ps1)\[\033[00m\]# '
 
 # User specific aliases and functions
 
@@ -30,6 +31,7 @@ alias g='mvim'
 alias py3='python3'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
+
 # Crazy aliases to switch between Java versions
 alias usejava6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6) ; PATH=$JAVA_HOME/bin:$PATH'
 alias usejava7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) ; PATH=$JAVA_HOME/bin:$PATH'
@@ -46,18 +48,6 @@ set -o vi
 # git completion
 source ~/bin/git-completion.bash
 
-# Setup Scala
-export SCALA_HOME=~/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
-# Path addition for gradle
-export PATH=$PATH:~/tools/gradle/gradle/bin
-
 # Config alias for dotfile management via git.
 # See https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-# Macport stuff
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export MANPATH=/opt/local/share/man:$MANPATH
-
+alias dotfile='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
