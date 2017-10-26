@@ -51,3 +51,6 @@ source ~/bin/git-completion.bash
 # Config alias for dotfile management via git.
 # See https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 alias dotfile='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Put cmake plus my bin folder on PATH
+export PATH=$PATH:/Applications/CMake.app/Contents/bin;$HOME/bin

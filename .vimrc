@@ -36,4 +36,3 @@ autocmd BufRead *.js set expandtab ts=2 sw=2 softtabstop=4
 autocmd BufRead *.json set expandtab ts=2 sw=2 softtabstop=4
 
 filetype plugin indent on
-
