@@ -10,7 +10,7 @@ fi
 export PS_INSTANCE_NAME=`hostname`
 
 #PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
-PS1="\n[\d, \t] \u \[\033[33m\]$(__git_ps1 "(%s)")\[\033[00m\]\n\[\033[1;32m\]\w# \[\033[0m\]"
+PS1='\n[\d, \t] \[\033[1;32m\]\w\[\033[0m\]\n\u\[\033[33m\]$(__git_ps1)\[\033[00m\]# '
 #PS1="\n[\d, \t] \u \[\033[33m\]$(__git_ps1 "(%s)")\[\033[00m\]\n"
 #PS1='[\u@\h $(__git_ps1 " (%s)")]\$ '
 
@@ -25,6 +25,10 @@ alias log='git log'
 alias h='history'
 alias hi='history | grep'
 alias zip='zip -x "*.DS_Store" -x "*.svn"'
+alias cdev='cmake .. -G "Visual Studio 15 Win64" -DCMAKE_INSTALL_PREFIX=${HOME}/.cmake/cache'
+alias cci='cmake .. -G "Visual Studio 15 Win64" -DCMAKE_INSTALL_PREFIX=${HOME}/.cmake/cache -DENV=CI'
+alias cdev32='cmake .. -G "Visual Studio 15" -DCMAKE_INSTALL_PREFIX=${HOME}/.cmake/cache'
+alias cci32='cmake .. -G "Visual Studio 15" -DCMAKE_INSTALL_PREFIX=${HOME}/.cmake/cache -DENV=CI'
 
 function mc { mkdir -p "$1" && cd "$1"; }
 function g  { gvim "$1" & }

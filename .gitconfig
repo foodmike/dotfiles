@@ -33,7 +33,9 @@
 
   # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
   
-  gr = log --graph --decorate --all --date=short --format=format:'%C(bold magenta)%h%C(reset)%C(auto)%d%C(reset): %C(white)%s%C(reset) %C(green)- %an%C(reset)%C(dim green), %cd%C(reset)'
+  gr = log --graph --decorate --all --date=short --format=format:'%C(bold magenta)%h%C(reset) %C(green)%an%C(dim green) [%cd]%C(reset)%C(auto)%d%C(reset): %C(white)%<(120,trunc)%s%C(reset)' 
+  lr = log         --decorate --all --date=short --format=format:'%C(bold magenta)%h%C(reset) %C(green)%<(20,trunc)%an%C(dim green) [%cd]%C(reset)%C(auto)%d%C(reset): %C(white)%<(120,trunc)%s%C(reset)' 
+  grd = !"git gr --simplify-by-decoration"
 
   lg = !"git lg1"
   lg1 = !"git lg1-specific --all"
