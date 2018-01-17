@@ -7,10 +7,6 @@
 # message file.  If the hook fails with a non-zero status,
 # the commit is aborted.
 #
-# To enable this hook, rename this file to "prepare-commit-msg".
-
-#Modified by: Bao Thai - Date: August 22nd 2017
-#Description: Trying to get branch name at the start of the commit message
 
 branchPath=$(git symbolic-ref -q HEAD)
 branchName=${branchPath##*/}
