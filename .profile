@@ -50,6 +50,10 @@ source ~/bin/git-completion.bash
 export SCALA_HOME=~/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
+# Go executables
+export PATH=$PATH:$HOME/go/bin
+export GOPATH=$(go env GOPATH)
+
 # Path addition for gradle
 export PATH=$PATH:~/tools/gradle/gradle/bin
 
