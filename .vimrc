@@ -47,3 +47,10 @@ autocmd BufRead *.json set expandtab ts=2 sw=2 softtabstop=4
 autocmd BufRead *.py im :<CR> :<CR><TAB>
 
 filetype plugin indent on
+
+" Use pathogen to manage dependencies
+execute pathogen#infect()
+
+" Set .tags as the ctags file. This will also tell vim
+" to search up the directory tree for a .tags file.
+set tags=./.tags;
