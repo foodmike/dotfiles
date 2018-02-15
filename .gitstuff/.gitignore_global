@@ -1,4 +1,4 @@
 
-.swp
-.tags
-.ctags
+*.swp
+*.tags
+*.ctags

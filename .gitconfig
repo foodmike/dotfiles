@@ -5,7 +5,7 @@
 	editor = vim
 	autocrlf = input
 	excludesfile = /Users/mike.mahoney/.gitstuff/.gitignore_global
-	hooksPath = /Users/mike.mahoney/.gitstuff
+	hooksPath = /Users/mike.mahoney/.gitstuff/hooks
 [branch]
 	autosetuprebase = always
 [push]
