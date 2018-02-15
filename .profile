@@ -5,15 +5,12 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-~/.gitstuff/.git-prompt.sh
+# git completion and prompt, using what was installed by brew
+source /usr/local/git/contrib/completion/git-prompt.sh
+source /usr/local/git/contrib/completion/git-completion.bash
 
-# git completion
-source ~/bin/git-completion.bash
-
-export PS_INSTANCE_NAME=`hostname`
-
-PS1='\n[\d, \t] \u\n\[\033[1;32m\]\w# \[\033[0m\]'
-#PS1='\n[\d, \t] \[\033[1;32m\]\w\[\033[0m\]\n\u\[\033[33m\]$(__git_ps1)\[\033[00m\]# '
+# Set the prompt. Include git info.
+PS1='\n[\d, \t] \[\033[1;32m\]\w\[\033[0m\]\n\u\[\033[33m\]$(__git_ps1)\[\033[00m\]# '
 
 # User specific aliases and functions
 
