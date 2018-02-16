@@ -44,3 +44,6 @@ export HISTFILESIZE=5000
 # Use vi on command line
 set -o vi
 
+# Android setup
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
