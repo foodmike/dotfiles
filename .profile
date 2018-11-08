@@ -21,13 +21,15 @@ alias grep='grep -n'
 alias log='git log'
 alias h='history'
 alias hi='history | grep'
-alias zip='zip -x "*.DS_Store" -x "*.svn"'
+alias zip='zip -x "*.DS_Store" -x "*.svn" -x "*.swp"'
 
+# Git alias for working with dotfile repo from github
 alias dot='/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Mac stuff
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias g='mvim'
+alias mdiff='mvim -d'
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE' 
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
 
@@ -35,8 +37,17 @@ alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
 # See https://medium.com/adorableio/modern-javascript-ctags-configuration-199884dbcc1
 alias jstags='ctags -R -f .tags && sed -i "" -E "/^\(if|switch|function|module\.exports|it|describe\).+language:js$/d" .tags'
 
+# Some aliases for switching between Java 8 and Java 9.
+alias usejava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) ; PATH=$JAVA_HOME/bin:$PATH'
+alias usejava9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9) ; PATH=$JAVA_HOME/bin:$PATH'
+
+# Using Java 8 for now. Cordova builds look for Java 8.
+usejava8
+
 function mc { mkdir -p "$1" && cd "$1"; }
+function fjs { find $1 -name "*.js" -or -name "*.vue"; }
 export -f mc
+export -f fjs
 
 export EDITOR=vim
 export HISTFILESIZE=5000
@@ -47,3 +58,18 @@ set -o vi
 # Android setup
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
+# Gradle
+export PATH=$PATH:$HOME/tools/gradle-4.5.1/bin
+
+# Connection string for azure aopmturkstorkage account
+export AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=aopmturkstorage;AccountKey=iHEpcW+sbxiE+S7iANN9Ykxk6TEFnkcti8iFB6YdWG+Ghxx14VYLchfPcCgirZuJQsfZPCvB4ON1FJrt7skTNw==;EndpointSuffix=core.windows.net"
+
+# added by Anaconda3 5.2.0 installer
+#export PATH="/anaconda3/bin:$PATH"
+
+# added by Anaconda2 5.2.0 installer
+#export PATH="/anaconda2/bin:$PATH"
+
+# added by Anaconda3 5.2.0 installer
+#export PATH="/Users/mike.mahoney/anaconda3/bin:$PATH"

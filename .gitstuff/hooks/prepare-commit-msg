@@ -9,11 +9,12 @@
 #
 
 branchPath=$(git symbolic-ref -q HEAD)
-branchName=${branchPath##*/}
+branchName=${branchPath#refs/heads/}
+branchName=${branchName//\//\\\/}
 
 firstLine=$(head -n1 $1)
 
 #if [ -z "$firstLine" ]; then
-	sed -i "1s/^/[$branchName] /" $1
+	sed -i -e "1s/^/[$branchName] /" $1
 #fi
 

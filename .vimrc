@@ -12,7 +12,7 @@ set ts=4
 set sw=4
 set ai
 set fileformat=unix
-set ffs=dos,unix
+set ffs=unix,dos
 set ruler
 set number
 set belloff=all
@@ -28,7 +28,7 @@ hi CursorLine guibg=#161616
 " leader is comma
 let mapleader=","
 
-"set guifont=ProggyCleanTT:h12
+set guifont=hack
 "set guifontwide=STKaiti
 
 "
@@ -79,7 +79,7 @@ filetype plugin indent on
 noremap <C-space> :NERDTreeToggle<CR>
 
 " Close vim if NerdTree is the only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "
 " Navigation
@@ -113,6 +113,9 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 
 " Map kj in insert mode to <esc>
 inoremap kj <esc>
+
+nnoremap <leader>iso :%s/ISODate(\(.*\)")/\1"/<CR>
+nnoremap <leader>nin %s/NumberInt(\(\d*\))/\1/<CR>
 
 "
 " Status line
