@@ -26,10 +26,11 @@
     tags = tag -l
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     wipe = clean -fdx -e *.user -e *.suo
-    wipen = clean -fdxn -e *.user -e *.suo
+    wipen = clean -fdxn -e *.user -e *.suo  # Dry-run
     last = log --name-status -1 HEAD
     info = remote show origin
     dt = difftool
+    log = log --name-status
 
     # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
 
