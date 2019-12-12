@@ -66,9 +66,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 # Gradle
 export PATH=$PATH:$HOME/tools/gradle-4.5.1/bin
 
-# Connection string for azure aopmturkstorkage account
-export AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=aopmturkstorage;AccountKey=iHEpcW+sbxiE+S7iANN9Ykxk6TEFnkcti8iFB6YdWG+Ghxx14VYLchfPcCgirZuJQsfZPCvB4ON1FJrt7skTNw==;EndpointSuffix=core.windows.net"
-
 # added by Anaconda3 5.2.0 installer
 #export PATH="/anaconda3/bin:$PATH"
 
