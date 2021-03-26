@@ -31,6 +31,7 @@
     info = remote show origin
     dt = difftool
     log = log --name-status
+    grab = !"git stash && git pull && git stash pop"
 
     # Pretty graph logging from http://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
 

@@ -10,6 +10,7 @@ set backspace=indent,eol,start
 set expandtab
 set ts=4
 set sw=4
+set columns=120
 set ai
 set fileformat=unix
 set ffs=unix,dos

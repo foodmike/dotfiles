@@ -23,8 +23,8 @@ setopt APPEND_HISTORY
 # y: accept and execute the suggested correction
 # a: abort and do nothing
 # e: return to the prompt to continue editing
-setopt CORRECT
-setopt CORRECT_ALL
+#setopt CORRECT
+#setopt CORRECT_ALL
 
 #
 # This craziness integrates git with zsh, which we'll use in the prompt.
@@ -50,15 +50,23 @@ setopt PROMPT_SUBST
 PROMPT=$'\n''[%D{%a %b %d}, %*] %F{green}%~%f'$'\n''%n %F{yellow}${vcs_info_msg_0_}%f# '
 
 #
+# Use vi key bindings for input. See https://dougblack.io/words/zsh-vi-mode.html.
+#
+bindkey -v
+
+# There is a default .4 second delay after hitting the escape key. Reduce that.
+KEYTIMEOUT=1
+
+#
 # Aliases. The -g meams the alias will work *anywhere* in a command.
 #
-alias -g ls='ls -GF'
-alias -g ll='ls -l'
-alias -g la='ls -la'
-alias grep='grep -n'
+# alias -g ls='ls -GF'
+alias ls='ls -GF'
+alias ll='ls -l'
+alias la='ls -la'
 alias log='git log'
-alias h='history'
-alias hi='history | grep'
+alias h='history 1'
+alias hi='history 1 | grep'
 alias zip='zip -x "*.DS_Store" -x "*.svn" -x "*.swp"'
 
 # Git alias for working with dotfile repo from github
@@ -90,3 +98,14 @@ function fjs() {
 #
 autoload -Uz compinit && compinit
 
+EDITOR=vim
+
+#
+# Update the PATH
+#
+PATH=~/bin:$PATH
+
+#
+# Pull in Augmentir settings
+#
+source ~/.augrc
