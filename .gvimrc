@@ -64,7 +64,7 @@ let mapleader=","
 
 " }}}
 
-call pathogen#infect()                      " use pathogen
+" call pathogen#infect()                      " use pathogen
 " call pathogen#runtime_append_all_bundles()  " use pathogen
 
 " AutoGroups {{{
