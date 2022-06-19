@@ -1,0 +1,10 @@
+
+*.swp
+*.swo
+*.tags
+*.ctags
+
+.DS_Store
+
+*.env.dev
+*.env.mturk

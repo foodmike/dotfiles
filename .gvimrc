@@ -1,10 +1,7 @@
 
-" Colors and syntax {{{
-colorscheme koehler
-syntax enable
+set columns=100
 
-" Make the CursorLine very faint on a black background
-hi CursorLine term=underline guibg=#202020 cterm=underline
+" execute pathogen#infect()
 
 " }}}
 
