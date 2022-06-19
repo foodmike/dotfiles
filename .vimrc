@@ -25,6 +25,7 @@ set belloff=all
 " Highlight the current line in light grey
 set cursorline
 hi CursorLine guibg=#161616
+set lines=50
 
 " leader is comma
 let mapleader=","
@@ -141,5 +142,5 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 set tags=./.tags;
 
 " Use pathogen to manage dependencies
-execute pathogen#infect()
+" execute pathogen#infect()
 

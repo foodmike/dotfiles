@@ -24,9 +24,6 @@ alias h='history'
 alias hi='history | grep'
 alias zip='zip -x "*.DS_Store" -x "*.svn" -x "*.swp"'
 
-# Git alias for working with dotfile repo from github
-alias dot='/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 # Mac stuff
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias g='mvim'
@@ -58,21 +55,5 @@ export HISTFILESIZE=5000
 
 # Use vi on command line
 set -o vi
-
-# Android setup
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-
-# Gradle
-export PATH=$PATH:$HOME/tools/gradle-4.5.1/bin
-
-# added by Anaconda3 5.2.0 installer
-#export PATH="/anaconda3/bin:$PATH"
-
-# added by Anaconda2 5.2.0 installer
-#export PATH="/anaconda2/bin:$PATH"
-
-# added by Anaconda3 5.2.0 installer
-#export PATH="/Users/mike.mahoney/anaconda3/bin:$PATH"
 
 export PATH=$PATH:$HOME/bin
